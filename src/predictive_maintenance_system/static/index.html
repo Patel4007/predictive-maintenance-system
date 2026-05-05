@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictive Maintenance System</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <div class="masthead__copy">
+          <p class="eyebrow">Maintenance Strategy Studio</p>
+          <h1>Predictive Maintenance System</h1>
+          <p class="masthead__lead">
+            A planning-first view of machine risk, remaining useful life, and maintenance timing. This dashboard is
+            tuned for decisions, not plant-floor SCADA mimicry.
+          </p>
+          <p id="site-meta" class="masthead__context">Loading portfolio context...</p>
+        </div>
+
+        <div class="masthead__meta">
+          <article class="status-tile">
+            <span class="status-tile__label">Fleet</span>
+            <strong id="fleet-name">Loading...</strong>
+            <small>Multi-asset predictive maintenance program</small>
+          </article>
+          <article class="status-tile">
+            <span class="status-tile__label">Telemetry</span>
+            <strong id="heartbeat">Waiting...</strong>
+            <small>Latest model refresh</small>
+          </article>
+          <article class="status-tile">
+            <span class="status-tile__label">Live Stream</span>
+            <strong id="stream-status" class="pill pill--neutral">Connecting</strong>
+            <small id="stream-feedback">Opening server-sent telemetry updates.</small>
+          </article>
+        </div>
+      </header>
+
+      <section class="focus-board">
+        <div class="focus-board__main">
+          <div class="focus-board__topline">
+            <span id="focus-chip" class="pill pill--neutral">Calibrating</span>
+            <span id="focus-priority" class="pill pill--neutral">Planning</span>
+          </div>
+          <p class="eyebrow">Priority Forecast</p>
+          <h2 id="focus-title">Calibrating the risk view</h2>
+          <p id="focus-detail" class="focus-board__detail">Loading the most important asset to intervene on.</p>
+          <p id="focus-action" class="focus-board__action">Building the next best maintenance action.</p>
+        </div>
+
+        <div class="focus-board__stats">
+          <article class="spotlight-stat">
+            <span>Likely Failure Mode</span>
+            <strong id="focus-mode">-</strong>
+          </article>
+          <article class="spotlight-stat">
+            <span>24h / 7d Risk</span>
+            <strong id="focus-risk">-</strong>
+          </article>
+          <article class="spotlight-stat">
+            <span>Remaining Useful Life</span>
+            <strong id="focus-rul">-</strong>
+          </article>
+          <article class="spotlight-stat">
+            <span>Protected Value</span>
+            <strong id="focus-savings">-</strong>
+          </article>
+          <article class="spotlight-stat spotlight-stat--wide">
+            <span>Next Maintenance Window</span>
+            <strong id="focus-window">Loading...</strong>
+          </article>
+        </div>
+      </section>
+
+      <main class="dashboard">
+        <section class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Fleet Pulse</p>
+              <h2>Decision Scoreboard</h2>
+            </div>
+            <p class="panel__meta">A management-facing summary of risk concentration, work queue pressure, and protected uptime.</p>
+          </div>
+          <div id="kpi-grid" class="scoreboard"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Workbench</p>
+              <h2>Maintenance Queue</h2>
+            </div>
+          </div>
+          <div id="schedule-list" class="schedule-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Scenario Lab</p>
+              <h2>Stress the Model</h2>
+            </div>
+          </div>
+          <div id="scenario-list" class="scenario-grid"></div>
+          <div id="scenario-feedback" class="panel__note">Choose a scenario to push the predictive model into a new operating regime.</div>
+        </section>
+
+        <section class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Asset Atlas</p>
+              <h2>Machine Forecast Cards</h2>
+            </div>
+            <p class="panel__meta">Each asset card combines telemetry, interpretable risk drivers, and local trend views.</p>
+          </div>
+          <div id="asset-grid" class="asset-grid"></div>
+        </section>
+
+        <section class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Signal Deck</p>
+              <h2>Portfolio Trend Lines</h2>
+            </div>
+          </div>
+          <div id="chart-grid" class="signal-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Model Lens</p>
+              <h2>How This View Thinks</h2>
+            </div>
+          </div>
+          <div class="method-grid">
+            <article class="method-card">
+              <span>24h Hazard</span>
+              <p>Short-horizon failure pressure from the freshest telemetry drift and anomaly behavior.</p>
+            </article>
+            <article class="method-card">
+              <span>7d Outlook</span>
+              <p>Medium-horizon risk accumulation that captures wear, missed service, and worsening trends.</p>
+            </article>
+            <article class="method-card">
+              <span>Schedule Optimizer</span>
+              <p>Work orders are ranked by risk, criticality, crew capacity, and downtime cost avoided.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Insight Tape</p>
+              <h2>Recent Findings</h2>
+            </div>
+          </div>
+          <div id="insight-list" class="insight-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

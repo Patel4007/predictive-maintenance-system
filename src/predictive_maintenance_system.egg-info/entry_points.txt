@@ -1,0 +1,2 @@
+[console_scripts]
+predictive-maintenance-system = predictive_maintenance_system.api:run
