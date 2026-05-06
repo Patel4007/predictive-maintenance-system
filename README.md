@@ -26,6 +26,16 @@ flowchart LR
     G --> H["Live SSE Dashboard"]
 ```
 
+## Project Output
+
+<p align="center">
+  <img src="images/dashboard.png" width="250" height="255">
+  <img src="images/maintenance_and_summary_view.png" width="250" height="255">
+  <img src="images/analytics_and_forecasting.png" width="250" height="255">
+  <img src="images/real-time_anomaly_detection.png" width="250" height="255">
+</p>
+
+
 ## Project Layout
 
 ```text
